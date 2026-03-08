@@ -4,9 +4,11 @@
 レスポンシブ対応・スワイプ型・SEO対策・Googleアナリティクス対応。  
 セクションは `includes` フォルダで共通化され、エリア別に差し替え可能です。
 
+
 ## フォルダ構成
 
 ```
+
 med-sr-hirai/
 ├── index.php                    ← トップページ（簡易版構成）
 ├── form_send.php                ← お問い合わせフォーム送信処理
@@ -54,9 +56,11 @@ med-sr-hirai/
         ├── img_content_bg.jpg
         ├── img_cta_bg.jpg
         └── img_faq_bg.jpg
+
 ```
 
 ## 使い方
+
 
 ### 1. 共通設定
 

@@ -1,7 +1,7 @@
 <?php
 // ヘッダー・head タグ（SEO・OGP・スタイル読み込み）
-$css_path = $base_path . 'assets/css/style.css';
-$swipe_css_path = $base_path . 'assets/css/swipe.css';
+$css_path = $base_path . '/assets/css/style.css';
+$swipe_css_path = $base_path . '/assets/css/swipe.css';
 
 ?>
 <!DOCTYPE html>

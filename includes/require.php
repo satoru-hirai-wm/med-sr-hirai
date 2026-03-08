@@ -5,8 +5,8 @@
  * DB利用時は別途 config/config_database.php を require すること
  *
  * 静的ファイルのパス: 各ページで require の前に $path_depth を指定
- *   例: $path_depth = 3;  → ../../../assets/css/... となる（3階層上）
- *   ルートの index.php は 0、areas/hokkaido/chitose/ なら 3
+ *   例: $path_depth = 4;  → ../../../../assets/css/... となる（4階層上）
+ *   ルートの index.php は 0、areas/hokkaido/cities/chitose/ なら 4
  */
 if (session_status() === PHP_SESSION_NONE) {
   session_start();

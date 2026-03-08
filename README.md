@@ -41,11 +41,10 @@ med-sr-hirai/
 │   └── footer.php
 ├── areas/
 │   └── hokkaido/
-│       ├── chitose/
-│       │   ├── index.php        ← 千歳市エリアページ
-│       │   └── config_area.php  ← エリア別設定（タイトル・URL等）
-│       └── sapporo/
-│           └── index.php        ← 札幌市エリアページ
+│       └── cities/
+│           └── chitose/
+│               ├── index.php        ← 千歳市エリアページ
+│               └── config_area.php  ← エリア別設定（タイトル・URL等）
 └── assets/
     ├── css/
     │   ├── style.css            ← メインスタイル
@@ -70,7 +69,7 @@ med-sr-hirai/
 
 ### 2. エリアページの追加
 
-1. `areas/{都道府県}/{市区町村}/` にフォルダを作成
+1. `areas/{都道府県}/cities/{市区町村}/` にフォルダを作成
 2. `index.php` を配置（既存エリアをコピーして編集）
 3. `config_area.php` で以下を設定
    - `$page_title`, `$page_description`, `$page_url`

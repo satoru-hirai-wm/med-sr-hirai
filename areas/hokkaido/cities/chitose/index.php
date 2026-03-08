@@ -1,53 +1,53 @@
 <?php
-$path_depth = 3; // areas/hokkaido/chitose
-require_once __DIR__ . '/../../../includes/require.php';
+$path_depth = 4; // areas/hokkaido/cities/chitose
+require_once __DIR__ . '/../../../../includes/require.php';
 if (file_exists(__DIR__ . '/config_area.php')) {
   require_once __DIR__ . '/config_area.php';
 }
 ?>
-<?php require_once __DIR__ . '/../../../includes/head.php'; ?>
-<?php require_once __DIR__ . '/../../../includes/ga.php'; ?>
+<?php require_once __DIR__ . '/../../../../includes/head.php'; ?>
+<?php require_once __DIR__ . '/../../../../includes/ga.php'; ?>
 
 <body>
   <main class="scroll-container">
     <!-- ヒーロー -->
-    <?php require_once __DIR__ . '/../../../includes/hero.php'; ?>
+    <?php require_once __DIR__ . '/../../../../includes/hero.php'; ?>
 
     <!-- 問題提起 -->
-    <?php require_once __DIR__ . '/../../../includes/problem.php'; ?>
+    <?php require_once __DIR__ . '/../../../../includes/problem.php'; ?>
 
     <!-- 原因 -->
-    <?php require_once __DIR__ . '/../../../includes/content.php'; ?>
+    <?php require_once __DIR__ . '/../../../../includes/content.php'; ?>
 
     <!-- 解決策 -->
-    <?php require_once __DIR__ . '/../../../includes/content2.php'; ?>
+    <?php require_once __DIR__ . '/../../../../includes/content2.php'; ?>
 
     <!-- 専門性 -->
-    <?php //require_once __DIR__ . '/../../../includes/content3.php'; ?>
+    <?php //require_once __DIR__ . '/../../../../includes/content3.php'; ?>
 
     <!-- パートナーシップ -->
-    <?php require_once __DIR__ . '/../../../includes/content4.php'; ?>
+    <?php require_once __DIR__ . '/../../../../includes/content4.php'; ?>
 
     <!-- サービス内容① -->
-    <?php require_once __DIR__ . '/../../../includes/content5.php'; ?>
+    <?php require_once __DIR__ . '/../../../../includes/content5.php'; ?>
 
     <!-- サービス内容② -->
-    <?php require_once __DIR__ . '/../../../includes/content6.php'; ?>
+    <?php require_once __DIR__ . '/../../../../includes/content6.php'; ?>
 
     <!-- 相談内容 -->
-    <?php require_once __DIR__ . '/../../../includes/content7.php'; ?>
+    <?php require_once __DIR__ . '/../../../../includes/content7.php'; ?>
 
     <!-- よくある質問 -->
-    <?php //require_once __DIR__ . '/../../../includes/faq.php'; ?>
+    <?php //require_once __DIR__ . '/../../../../includes/faq.php'; ?>
 
     <!-- CTA -->
-    <?php require_once __DIR__ . '/../../../includes/cta.php'; ?>
+    <?php require_once __DIR__ . '/../../../../includes/cta.php'; ?>
     
     <!-- お問い合わせフォーム -->
-    <?php require_once __DIR__ . '/../../../includes/contact_form.php'; ?>
+    <?php require_once __DIR__ . '/../../../../includes/contact_form.php'; ?>
 
   </main>
-  <?php require_once __DIR__ . '/../../../includes/section_nav.php'; ?>
+  <?php require_once __DIR__ . '/../../../../includes/section_nav.php'; ?>
   <script>
   (function() {
     var container = document.querySelector('.scroll-container');

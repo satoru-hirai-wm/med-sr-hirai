@@ -1,5 +1,12 @@
 RewriteEngine On
 
+# --- http → https + www → 非www ---
 RewriteCond %{HTTP_HOST} ^www\.med-sr-hirai\.jp$ [NC,OR]
-RewriteCond %{SERVER_PORT} !^443$
+RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://med-sr-hirai.jp/$1 [R=301,L]
+
+# --- /chitose/ → 実ファイルへ内部転送 ---
+RewriteRule ^chitose/?$ areas/hokkaido/cities/chitose/ [L]
+
+# --- /sitemap/ → HTMLサイトマップ ---
+RewriteRule ^sitemap/?$ sitemap.php [L]

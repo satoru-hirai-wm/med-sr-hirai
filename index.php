@@ -20,31 +20,38 @@ require_once __DIR__ . '/includes/require.php'; ?>
     <?php require_once __DIR__ . '/includes/contact_form.php'; ?>
   </main>
   <?php require_once __DIR__ . '/includes/section_nav.php'; ?>
+  <footer>
+    <a href="/chitose/">千歳市の医療社労士</a>
+  </footer>
   <script>
-  (function() {
-    var container = document.querySelector('.scroll-container');
-    if (!container) return;
-    var sections = container.querySelectorAll('.section');
-    function getCurrentIndex() {
-      var scrollTop = container.scrollTop;
-      var vh = container.clientHeight / 2;
-      var idx = 0;
-      for (var i = 0; i < sections.length; i++) {
-        if (sections[i].offsetTop <= scrollTop + vh) idx = i;
-      }
-      return idx;
-    }
-    document.querySelectorAll('.section-nav-btn').forEach(function(btn) {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        var idx = getCurrentIndex();
-        var target = this.dataset.dir === 'prev' ? sections[idx - 1] : sections[idx + 1];
-        if (target) {
-          container.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
+    (function() {
+      var container = document.querySelector('.scroll-container');
+      if (!container) return;
+      var sections = container.querySelectorAll('.section');
+
+      function getCurrentIndex() {
+        var scrollTop = container.scrollTop;
+        var vh = container.clientHeight / 2;
+        var idx = 0;
+        for (var i = 0; i < sections.length; i++) {
+          if (sections[i].offsetTop <= scrollTop + vh) idx = i;
         }
+        return idx;
+      }
+      document.querySelectorAll('.section-nav-btn').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          var idx = getCurrentIndex();
+          var target = this.dataset.dir === 'prev' ? sections[idx - 1] : sections[idx + 1];
+          if (target) {
+            container.scrollTo({
+              top: target.offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
       });
-    });
-  })();
+    })();
   </script>
 </body>
 

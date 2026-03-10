@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://med-sr-hirai.jp/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www\.med-sr-hirai\.jp$ [NC]
+RewriteRule ^(.*)$ https://med-sr-hirai.jp/$1 [R=301,L]

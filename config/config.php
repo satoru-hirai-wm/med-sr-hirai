@@ -6,6 +6,9 @@
  * $page_title, $page_description, $page_url は各エリアの config_area.php で定義してください。
  */
 
+// サイトのベースURL（ファビコン・OGP画像など絶対パス用）
+$site_base_url = 'https://med-sr-hirai.jp/';
+
 // Google Analytics
 $ga_id = 'G-XXXXXXXXXX';
 

@@ -1,0 +1,18 @@
+# ローカル環境用 .htaccess
+# 使い方: このファイルを .htaccess にコピー
+#   copy .htaccess.local .htaccess   (Windows)
+#   cp .htaccess.local .htaccess    (Mac/Linux)
+
+RewriteEngine On
+RewriteBase /
+
+# HTTPS リダイレクトなし（ローカル用）
+
+# --- favicon.ico → favicon.php で配信 ---
+RewriteRule ^favicon\.ico$ favicon.php [L]
+
+# --- /chitose/ → 実ファイルへ内部転送 ---
+RewriteRule ^chitose/?$ areas/hokkaido/cities/chitose/ [L]
+
+# --- /sitemap/ → HTMLサイトマップ ---
+RewriteRule ^sitemap/?$ sitemap.php [L]

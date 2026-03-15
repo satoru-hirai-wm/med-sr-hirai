@@ -1,0 +1,21 @@
+# 本番環境用 .htaccess
+# 使い方: このファイルを .htaccess にコピー
+#   copy .htaccess.production .htaccess   (Windows)
+#   cp .htaccess.production .htaccess     (Mac/Linux)
+
+RewriteEngine On
+RewriteBase /
+
+# --- http → https + www → 非www ---
+RewriteCond %{HTTP_HOST} ^(www\.)?med-sr-hirai\.jp$ [NC]
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://med-sr-hirai.jp/$1 [R=301,L]
+
+# --- favicon.ico → favicon.php で配信 ---
+RewriteRule ^favicon\.ico$ favicon.php [L]
+
+# --- /chitose/ → 実ファイルへ内部転送 ---
+RewriteRule ^chitose/?$ areas/hokkaido/cities/chitose/ [L]
+
+# --- /sitemap/ → HTMLサイトマップ ---
+RewriteRule ^sitemap/?$ sitemap.php [L]

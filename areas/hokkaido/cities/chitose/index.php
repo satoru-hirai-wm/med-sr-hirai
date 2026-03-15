@@ -37,6 +37,9 @@ if (file_exists(__DIR__ . '/config_area.php')) {
     <!-- 相談内容 -->
     <?php require_once __DIR__ . '/../../../../includes/content7.php'; ?>
 
+    <!-- 代表メッセージ -->
+    <?php require_once __DIR__ . '/../../../../includes/message.php'; ?>
+
     <!-- よくある質問 -->
     <?php //require_once __DIR__ . '/../../../../includes/faq.php'; ?>
 

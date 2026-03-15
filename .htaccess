@@ -1,12 +1,25 @@
 RewriteEngine On
+RewriteBase /
 
-# --- http → https + www → 非www ---
-RewriteCond %{HTTP_HOST} ^www\.med-sr-hirai\.jp$ [NC,OR]
+# ============================================================
+# 環境の切り替え
+# ローカル: HTTP_HOST が localhost / 127.0.0.1 の場合
+# 本番:     med-sr-hirai.jp の場合（HTTPS・www正規化を適用）
+# 同一ファイルでホスト名により自動で挙動が切り替わります。
+# 完全に別ルールにしたい場合は .htaccess.local / .htaccess.production を
+#  .htaccess にコピーして使用してください。
+# ============================================================
+
+# --- 本番のみ: http → https + www → 非www（ローカルではスキップ） ---
+RewriteCond %{HTTP_HOST} ^(www\.)?med-sr-hirai\.jp$ [NC]
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://med-sr-hirai.jp/$1 [R=301,L]
 
-# --- /chitose/ → 実ファイルへ内部転送 ---
+# --- 共通: favicon.ico → favicon.php で配信 ---
+RewriteRule ^favicon\.ico$ favicon.php [L]
+
+# --- 共通: /chitose/ → 実ファイルへ内部転送 ---
 RewriteRule ^chitose/?$ areas/hokkaido/cities/chitose/ [L]
 
-# --- /sitemap/ → HTMLサイトマップ ---
+# --- 共通: /sitemap/ → HTMLサイトマップ ---
 RewriteRule ^sitemap/?$ sitemap.php [L]

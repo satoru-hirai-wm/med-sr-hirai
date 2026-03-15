@@ -707,6 +707,183 @@ body {
   margin-bottom: 0;
 }
 
+/* 代表メッセージ */
+#message {
+  background: linear-gradient(rgba(248, 250, 252, 0.9), rgba(248, 250, 252, 0.92)),
+    url(../img/img_content_bg.jpg) center center / cover no-repeat;
+  position: relative;
+}
+
+#message::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(2px);
+  pointer-events: none;
+}
+
+#message .container {
+  position: relative;
+  z-index: 1;
+}
+
+.message-catchphrase {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-align: center;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.message-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(229, 231, 235, 0.8);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.message-inner {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.message-photo {
+  flex-shrink: 0;
+}
+
+.message-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  aspect-ratio: 1;
+  box-shadow: var(--shadow-md);
+}
+
+.message-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.message-office {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.message-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.message-qualifications {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+}
+
+.message-qualifications li {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 1.8;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.message-qualifications li i {
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  font-size: 0.5rem;
+  color: var(--color-accent);
+}
+
+.message-career {
+  margin-top: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.message-career h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 0.75rem;
+}
+
+.message-career ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.message-career li {
+  font-size: 0.85rem;
+  line-height: 1.9;
+  color: var(--color-text-muted);
+  padding-left: 0;
+}
+
+.message-philosophy {
+  margin-top: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.message-philosophy p {
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.message-philosophy p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .message-catchphrase {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .message-card {
+    padding: 1.5rem;
+  }
+
+  .message-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .message-photo {
+    max-width: 160px;
+    margin: 0 auto;
+  }
+
+  .message-body {
+    text-align: left;
+  }
+
+  .message-career li,
+  .message-philosophy p {
+    font-size: 0.8rem;
+    line-height: 1.8;
+  }
+}
+
 /* CTA */
 .cta {
   background: linear-gradient(rgba(30, 58, 95, 0.8), rgba(30, 58, 95, 0.85)),

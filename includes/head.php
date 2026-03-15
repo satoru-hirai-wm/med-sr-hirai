@@ -10,6 +10,8 @@ $swipe_css_path = $base_path . '/assets/css/swipe.css';
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link rel="icon" type="image/jpeg" href="<?php echo h($site_base_url); ?>favicon.ico?v=2">
+  <link rel="shortcut icon" type="image/jpeg" href="<?php echo h($site_base_url); ?>favicon.ico?v=2">
   <title><?php echo h($page_title); ?></title>
   <meta name="description" content="<?php echo h($page_description); ?>">
   <meta name="keywords" content="<?php echo h($page_keywords); ?>">

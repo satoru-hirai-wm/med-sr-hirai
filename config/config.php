@@ -10,7 +10,7 @@
 $site_base_url = 'https://med-sr-hirai.jp/';
 
 // Google Analytics
-$ga_id = 'G-XXXXXXXXXX';
+$ga_id = 'G-G0QF2BB1ES';
 
 // お問い合わせフォーム送信先（受信するメールアドレス）
 $contact_mail_to = $contact_mail_to ?? 'info@example.com';

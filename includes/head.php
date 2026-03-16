@@ -43,6 +43,20 @@ $swipe_css_path = $base_path . '/assets/css/swipe.css';
   }
   </script>
 
+  <!-- アナリティクス (GA4) -->
+  <?php
+  $ga_id = $ga_id ?? '';
+  if ($ga_id !== '' && preg_match('/^G-[A-Z0-9]+$/', $ga_id)) {
+  ?>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo h($ga_id); ?>"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '<?php echo h($ga_id); ?>');
+  </script>
+  <?php } ?>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://unpkg.com/destyle.css@1.0.5/destyle.css" rel="stylesheet">

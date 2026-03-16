@@ -1,5 +1,5 @@
 <?php
-$path_depth = 4; // areas/hokkaido/cities/chitose
+$path_depth = 4; // areas/tokyo/cities/toshima
 require_once __DIR__ . '/../../../../includes/require.php';
 if (file_exists(__DIR__ . '/config_area.php')) {
   require_once __DIR__ . '/config_area.php';
@@ -9,7 +9,6 @@ if (file_exists(__DIR__ . '/config_area.php')) {
 
 <body>
   <main class="scroll-container">
-  
     <!-- ヒーロー -->
     <?php require_once __DIR__ . '/../../../../includes/hero.php'; ?>
 

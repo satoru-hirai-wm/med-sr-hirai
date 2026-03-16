@@ -21,5 +21,8 @@ RewriteRule ^favicon\.ico$ favicon.php [L]
 # --- 共通: /chitose/ → 実ファイルへ内部転送 ---
 RewriteRule ^chitose/?$ areas/hokkaido/cities/chitose/ [L]
 
+# --- 共通: /toshima/ → 実ファイルへ内部転送 ---
+RewriteRule ^toshima/?$ areas/tokyo/cities/toshima/ [L]
+
 # --- 共通: /sitemap/ → HTMLサイトマップ ---
 RewriteRule ^sitemap/?$ sitemap.php [L]

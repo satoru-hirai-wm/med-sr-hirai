@@ -2,7 +2,6 @@
 $path_depth = 0; // ルート
 require_once __DIR__ . '/includes/require.php'; ?>
 <?php require_once __DIR__ . '/includes/head.php'; ?>
-<?php require_once __DIR__ . '/includes/ga.php'; ?>
 
 <body>
   <main class="scroll-container">

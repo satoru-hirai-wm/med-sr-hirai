@@ -29,8 +29,7 @@ med-sr-hirai/
 │   └── functions.php            ← 共通関数（h関数など）
 ├── includes/
 │   ├── require.php              ← 共通読み込み（config・functions・session）
-│   ├── head.php                 ← head・SEO・OGP
-│   ├── ga.php                   ← Googleアナリティクス
+│   ├── head.php                 ← head・SEO・OGP・GA4（config の $ga_id）
 │   ├── section_nav.php          ← セクション移動ボタン（↑↓固定表示）
 │   ├── hero.php                 ← Heroセクション
 │   ├── problem.php              ← 問題提起セクション（エリア用）

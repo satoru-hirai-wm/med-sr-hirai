@@ -17,16 +17,15 @@ require_once __DIR__ . '/includes/require.php'; ?>
     <?php require_once __DIR__ . '/includes/cta.php'; ?>
     <!-- お問い合わせフォーム -->
     <?php require_once __DIR__ . '/includes/contact_form.php'; ?>
+    <!-- フッダー -->
+    <?php require_once __DIR__ . '/includes/footer.php'; ?>
   </main>
   <?php require_once __DIR__ . '/includes/section_nav.php'; ?>
-  <footer>
-    <a href="/chitose/">千歳市の医療社労士</a>
-  </footer>
   <script>
     (function() {
       var container = document.querySelector('.scroll-container');
       if (!container) return;
-      var sections = container.querySelectorAll('.section');
+      var sections = container.querySelectorAll('.section, .footer');
 
       function getCurrentIndex() {
         var scrollTop = container.scrollTop;

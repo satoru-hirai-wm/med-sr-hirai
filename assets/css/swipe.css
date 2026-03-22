@@ -62,9 +62,27 @@ body {
 }
 
 /* Responsive: Mobile */
+/* フッター（LP最終スライド：1画面ぶん） */
+.scroll-container > .footer {
+  min-height: 100vh;
+  min-height: 100dvh;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: clamp(2rem, 5vh, 4rem) clamp(1.25rem, 4vw, 3rem);
+}
+
 @media (max-width: 640px) {
   .section {
     padding: 1.5rem 1rem;
+  }
+
+  .scroll-container > .footer {
+    padding: clamp(1.5rem, 4vh, 2.5rem) 1rem;
   }
 
   .scroll-indicator {

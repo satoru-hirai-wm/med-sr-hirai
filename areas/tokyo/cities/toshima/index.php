@@ -12,6 +12,20 @@ if (file_exists(__DIR__ . '/config_area.php')) {
     <!-- ヒーロー -->
     <?php require_once __DIR__ . '/../../../../includes/hero.php'; ?>
 
+    <!-- ご挨拶 -->
+    <section id="greeting" class="section greeting">
+      <div class="container">
+        <h2 class="section-title">
+          豊島区のクリニック経営者の方へ
+        </h2>
+        <p class="section-desc">
+          院長先生は今日も、診療をしながら採用・スタッフ管理・組織のことを同時に考えていませんか。
+          私は社労士として、その「一人で抱えすぎている状態」を何とかしたいと思い、クリニック専門の組織設計に特化しました。
+          守りの労務管理だけでなく、人が辞めない組織をつくる。それが、この事務所にしかできないことだと考えています。
+        </p>
+      </div>
+    </section>
+
     <!-- 問題提起 -->
     <?php require_once __DIR__ . '/../../../../includes/problem.php'; ?>
 
